@@ -1,3 +1,5 @@
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.Date" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page pageEncoding="UTF-8" %>
 <html>
@@ -20,6 +22,7 @@
         </c:if>
 
         <br>
+            <% ((List)request.getAttribute("list")).add(new Date()); %>
 
         <c:set var="num" scope="session" value="10"/>
         <c:choose>
