@@ -4,6 +4,7 @@
 <%@ page pageEncoding="UTF-8" %>
 <html>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="<c:url value="/styles/main.css"/>">
     <body>
         <h2>Hello World!</h2>
 
@@ -14,10 +15,11 @@
         <c:set var="myName" value="Alex"/>
         <h1>${myName}</h1>
 
-        <c:if test="${10 > 9}">
+        <c:set var="x" value="<%=x%>" />
+        <c:if test="${x < 10}">
             <p>True<p>
         </c:if>
-        <c:if test="${10 < 9}">
+        <c:if test="${x >= 10}">
             <p>False<p>
         </c:if>
 
